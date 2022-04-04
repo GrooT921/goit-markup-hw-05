@@ -87,41 +87,6 @@ a {
   color: var(--button-color-text);
 }
 
-/* Герой */
-
-.hero {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 200px 0;
-  background: #2f303a;
-  text-align: center;
-
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../img/overlay.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.headline {
-  margin: 0 auto;
-  margin-bottom: 30px;
-  width: 696px;
-  text-transform: uppercase;
-  text-align: center;
-
-  color: var(--button-color-text);
-
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-}
-
 /* Навигация */
 
 .header {
@@ -147,11 +112,29 @@ a {
   color: var(--accent-color-text);
 }
 
-.nav-list .nav-item + .nav-item {
+.nav-link{
+  position: relative;
+}
+
+.studio::after,
+.portfolio::after{
+  bottom: -1px;
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+
+  content: "";
+  display: block;
+  height: 4px;
+  background: var(--accent-color-text);
+  border-radius: 2px;
+}
+
+.nav-list .nav-item+.nav-item {
   margin-left: 50px;
 }
 
-.list-contacts .link-list + .link-list {
+.list-contacts .link-list+.link-list {
   margin-left: 50px;
 }
 
@@ -163,14 +146,14 @@ a {
 
 /* Оформление контактов */
 
-.icon-envelope{
+.icon-envelope {
   margin-right: 10px;
   fill: currentColor;
-  width: 16px; 
+  width: 16px;
   height: 12px;
 }
 
-.icon-smartphone{
+.icon-smartphone {
   margin-right: 10px;
   fill: currentColor;
   width: 10px;
@@ -205,6 +188,43 @@ a {
 .link-contacts:focus {
   color: var(--accent-color-text);
 }
+
+/* Герой */
+
+.hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 0;
+  background: #2f303a;
+  text-align: center;
+
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/overlay.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.headline {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 696px;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: var(--button-color-text);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+}
+
 
 /* Кнопки */
 
@@ -339,6 +359,37 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   text-align: center;
 }
 
+/* Оверлей проэкты */
+
+.overlay-project:hover .project-item {
+  transform: translatey(0);
+}
+
+
+
+.overlay-project{
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item{
+  position: absolute;
+  padding: 63px 24px;
+
+  bottom: 0;
+  height: 100%;
+  transform: translatey(100%);
+  transition: transform 250ms;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  
+  color: var(--button-color-text);
+  background: rgba(33, 150, 243, 0.9);
+}
+
 /* Особенности */
 
 .visually-hidden {
@@ -431,6 +482,32 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 
 .flex-list:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+/* Оформление чем мы заниаемся */
+
+.work-thumb{
+  position: relative;
+}
+
+.work-name{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  
+  height: 70px;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  
+  color: var(--button-color-text);
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* Команда */
