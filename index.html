@@ -74,7 +74,7 @@
                         <div class="container">
 
                             <h1 class="headline">Эффективные решения для вашего бизнеса</h1>
-                            <button type="button" class="item-buttons">Заказать услугу</button>
+                            <button type="button" class="item-buttons" data-modal-open>Заказать услугу</button>
 
                         </div>
                 
@@ -207,7 +207,7 @@
                                             </li>
                                             <li class="image-link">
                                                 <a href="" class="network-link">
-                                                <svg class="network" width="10px" height="20px">
+                                                <svg class="network" width="20px" height="20px">
                                                     <use href="./img/symbol-defs.svg#icon-facebook"></use>
                                                 </svg></a>
                                             </li>
@@ -243,7 +243,7 @@
                                             </li>
                                             <li class="image-link">
                                                 <a href="" class="network-link">
-                                                    <svg class="network" width="10px" height="20px">
+                                                    <svg class="network" width="20px" height="20px">
                                                         <use href="./img/symbol-defs.svg#icon-facebook"></use>
                                                     </svg></a>
                                             </li>
@@ -279,7 +279,7 @@
                                             </li>
                                             <li class="image-link">
                                                 <a href="" class="network-link">
-                                                    <svg class="network" width="10px" height="20px">
+                                                    <svg class="network" width="20px" height="20px">
                                                         <use href="./img/symbol-defs.svg#icon-facebook"></use>
                                                     </svg></a>
                                             </li>
@@ -315,7 +315,7 @@
                                             </li>
                                             <li class="image-link">
                                                 <a href="" class="network-link">
-                                                    <svg class="network" width="10px" height="20px">
+                                                    <svg class="network" width="20px" height="20px">
                                                         <use href="./img/symbol-defs.svg#icon-facebook"></use>
                                                     </svg></a>
                                             </li>
@@ -436,7 +436,16 @@
         </div>
             
     </footer>
-    
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Eius, qui molestias eos repellat nemo iure, error quis eaque, 
+                at nisi debitis! Error impedit voluptas nihil numquam aliquid amet culpa ea.</p>
+                <button data-modal-close>X</button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
 
