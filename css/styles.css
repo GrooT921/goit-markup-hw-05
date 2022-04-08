@@ -227,12 +227,7 @@ a {
   letter-spacing: 0.06em;
 }
 
-
 /* Кнопки */
-
-.button {
-  cursor: pointer;
-}
 
 .item-buttons {
   padding: 10px 32px;
